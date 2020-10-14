@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jsmall.mappers.MemberMapper">
+
+	<!-- 회원가입 -->
+	<insert id="join" parameterType="MemberVO">
+	insert into yjs_tb(yjs_id, yjs_name, yjs_password, 
+	yjs_zipcode, yjs_email, yjs_pnumber, yjs_addr, 
+	yjs_deaddr, yjs_nickname, yjs_receive, yjs_point, 
+	yjs_datesub, yjs_updatedate, yjs_lastlogin)
+	values(#{yjs_id}, #{yjs_name}, #{yjs_password}, 
+	#{yjs_zipcode}, #{yjs_email}, #{yjs_pnumber}, 
+	#{yjs_addr}, #{yjs_deaddr}, #{yjs_nickname}, 
+	#{yjs_receive}, #{yjs_point}, #{yjs_datesub}, 
+	#{yjs_updatedate}, #{yjs_lastlogin});
+	</insert>
+</mapper>
+
+
+
+
+
+
