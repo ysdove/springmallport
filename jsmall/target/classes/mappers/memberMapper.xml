@@ -7,16 +7,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<!-- 회원가입 -->
 	<insert id="join" parameterType="MemberVO">
-	insert into yjs_tb(yjs_id, yjs_name, yjs_password, 
-	yjs_zipcode, yjs_email, yjs_pnumber, yjs_addr, 
-	yjs_deaddr, yjs_nickname, yjs_receive, yjs_point, 
-	yjs_datesub, yjs_updatedate, yjs_lastlogin)
-	values(#{yjs_id}, #{yjs_name}, #{yjs_password}, 
-	#{yjs_zipcode}, #{yjs_email}, #{yjs_pnumber}, 
-	#{yjs_addr}, #{yjs_deaddr}, #{yjs_nickname}, 
-	#{yjs_receive}, #{yjs_point}, #{yjs_datesub}, 
-	#{yjs_updatedate}, #{yjs_lastlogin});
+	insert into yjs_tb(yjs_id, yjs_name, yjs_password, yjs_zipcode, yjs_email, yjs_pnumber, yjs_addr, 
+	yjs_deaddr, yjs_nickname, yjs_receive)
+	values(#{yjs_id}, #{yjs_name}, #{yjs_password},	#{yjs_zipcode}, #{yjs_email}, #{yjs_pnumber}, 
+	#{yjs_addr}, #{yjs_deaddr}, #{yjs_nickname}, #{yjs_receive})
 	</insert>
+	
+	<!-- 아이디중복 체크 -->
+	<select id="checkId" parameterType="String" resultType="int">
+	select count(*) from yjs_tb where yjs_id = #{yjs_id}
+	</select>
 </mapper>
 
 

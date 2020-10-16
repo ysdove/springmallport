@@ -31,12 +31,19 @@ public class MemberVO {
 	private String yjs_deaddr;
 	private String yjs_nickname;
 	private String yjs_receive;
+	private String yjs_authcode;
 	private int yjs_point;
 	private Date yjs_datesub;
 	private Date yjs_updatedate;
-	private Date yjs_lsatlogin;
+	private Date yjs_lastlogin;
 	
 	
+	public String getYjs_authcode() {
+		return yjs_authcode;
+	}
+	public void setYjs_authcode(String yjs_authcode) {
+		this.yjs_authcode = yjs_authcode;
+	}
 	public String getYjs_email() {
 		return yjs_email;
 	}
@@ -116,10 +123,10 @@ public class MemberVO {
 		this.yjs_updatedate = yjs_updatedate;
 	}
 	public Date getYjs_lsatlogin() {
-		return yjs_lsatlogin;
+		return yjs_lastlogin;
 	}
-	public void setYjs_lsatlogin(Date yjs_lsatlogin) {
-		this.yjs_lsatlogin = yjs_lsatlogin;
+	public void setYjs_lsatlogin(Date yjs_lastlogin) {
+		this.yjs_lastlogin = yjs_lastlogin;
 	}
 	
 	@Override
@@ -127,9 +134,12 @@ public class MemberVO {
 		return "MemberVO [yjs_id=" + yjs_id + ", yjs_name=" + yjs_name + ", yjs_password=" + yjs_password
 				+ ", yjs_zipcode=" + yjs_zipcode + ", yjs_email=" + yjs_email + ", yjs_pnumber=" + yjs_pnumber
 				+ ", yjs_addr=" + yjs_addr + ", yjs_deaddr=" + yjs_deaddr + ", yjs_nickname=" + yjs_nickname
-				+ ", yjs_receive=" + yjs_receive + ", yjs_point=" + yjs_point + ", yjs_datesub=" + yjs_datesub
-				+ ", yjs_updatedate=" + yjs_updatedate + ", yjs_lsatlogin=" + yjs_lsatlogin + "]";
+				+ ", yjs_receive=" + yjs_receive + ", yjs_authcode=" + yjs_authcode + ", yjs_point=" + yjs_point
+				+ ", yjs_datesub=" + yjs_datesub + ", yjs_updatedate=" + yjs_updatedate + ", yjs_lastlogin="
+				+ yjs_lastlogin + "]";
 	}
+	
+	
 	
 	
 	
